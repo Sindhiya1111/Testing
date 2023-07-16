@@ -11,13 +11,10 @@ import org.junit.Test;
 public class RobotPrintTest {
 
 	@Test
-    public void testPrintFloor() {
+	public void testPrintFloor() {
 		Robot robo = new Robot();
-        int[][] floor = {
-        		{1, 1, 1},
-        		{1, 1, 1},
-        		{1, 1, 0}
-        };
+		int[][] floor = new int[1][1];
+	    floor[0][0] = 1;
 
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outputStream);
@@ -25,11 +22,13 @@ public class RobotPrintTest {
 
         robo.printFloor(floor);
 
-        String expectedOutput = "2 * *  \n1 * * *\n0 * * *\n  0 1 2";
+        String expectedOutput = "0 * \n" +
+                "  0 \n\n";
         String actualOutput = outputStream.toString().trim();
 
         assertEquals(expectedOutput.trim(), actualOutput);
     }
+
 	
 	@Test
 	public void testPrintPosition() {

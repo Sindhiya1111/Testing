@@ -128,6 +128,7 @@ public class Robot {
 		 }else {
 			 
 			 pass = false;
+			 
 			 }
 		 return pass;
 	}
@@ -246,6 +247,9 @@ public class Robot {
         case 'P':
         		printFloor(floor);
         		break;
+        default:
+            System.out.println("Invalid Input");
+            break;
 		 }
 	 }
 	
