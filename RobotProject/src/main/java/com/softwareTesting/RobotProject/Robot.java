@@ -214,7 +214,7 @@ public class Robot {
 //executing command 
 	public static void executeCommand(String command) {
 		//System.out.println("Executing command.......");
-		switch (command.charAt(0)) {
+		switch (Character.toUpperCase(command.charAt(0))) {
 		case 'I':
 			 	int max = Integer.parseInt(command.substring(2));
 			 	floor  = new int[max][max];
@@ -248,6 +248,7 @@ public class Robot {
         		printFloor(floor);
         		break;
         default:
+
             System.out.println("Invalid Input");
             break;
 		 }

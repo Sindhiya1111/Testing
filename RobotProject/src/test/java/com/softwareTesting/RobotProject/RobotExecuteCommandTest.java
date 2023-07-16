@@ -68,7 +68,8 @@ public class RobotExecuteCommandTest {
 			
 	        robo.executeCommand("P");
 	      			
-			String expectedOutput =  "0 * \n" +
+
+	        String expectedOutput = "0 * \n" +
 	                "  0 \n\n";
 	        String actualOutput = outputStream.toString().trim();
 
