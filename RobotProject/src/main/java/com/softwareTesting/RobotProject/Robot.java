@@ -173,9 +173,10 @@ public class Robot {
 	
 //list of valid commands
 	public String commandScreen(boolean pass, String command) {
-		System.out.println(pass +"  "+command);
+		
 		if(pass) {
 			while (!command.equals("Q")){
+				System.out.println("");
 				System.out.println("________________________________________________________");
 				System.out.println("\n\n");
 	        	System.out.println("[U|u] Pen up \r\n"
@@ -324,10 +325,11 @@ public class Robot {
 					}
 				}
 				 System.out.println("Robot is moving "+ s + " steps" );
+				 row = n_row;
 			}else {
 				System.out.println("No space to move");
 			}
-			row = n_row;
+			//row = n_row;
 			//System.out.print(row);
 			break;
 		case "east":
@@ -343,10 +345,11 @@ public class Robot {
 					}
 				}
 				System.out.println("Robot is moving "+ s + " steps" );
+				col = n_col;
 			}else {
 				System.out.println("No space to move");
 			}
-			col = n_col;
+			//col = n_col;
 			//System.out.println(col);
 			break;
 		case "south":
@@ -362,10 +365,11 @@ public class Robot {
 					}
 				}
 				System.out.println("Robot is moving "+ s + " steps" );
+				row = n_row;
 			}else {
 				System.out.println("No space to move");
 			}
-			row = n_row;
+			//row = n_row;
 			//System.out.println(row);
 			break;
 		case "west":
@@ -381,10 +385,11 @@ public class Robot {
 					}
 				}
 				System.out.println("Robot is moving "+ s + " steps" );
+				col = n_col;
 			}else {
 				System.out.println("No space to move");
 			}
-			col = n_col;
+			//col = n_col;
 			//System.out.println(col);
 			break;
 		}
