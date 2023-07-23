@@ -249,7 +249,6 @@ public class Robot {
         		printFloor(floor);
         		break;
         default:
-
             System.out.println("Invalid Input");
             break;
 		 }

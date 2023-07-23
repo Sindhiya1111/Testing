@@ -7,7 +7,7 @@ import java.io.PrintStream;
 
 import org.junit.Before;
 import org.junit.Test;
-
+//Covers R4,R5,R3
 public class RobotExecuteCommandTest {
 	
 		Robot robo;
@@ -137,7 +137,33 @@ public class RobotExecuteCommandTest {
 			
 			assertEquals(expectedOutput, actualOutput);	
 		}
+
+		@Test
+		public void testExecuteCommand_M_south_penup() {
+						
+			ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+	        PrintStream printStream = new PrintStream(outputStream);
+	        System.setOut(printStream);
+			
+			robo.setCurrent_direction("south");
+			robo.setRow(5);
+			robo.setMax_row(20);
+			robo.setN_row(6);
+			robo.setPen_active(false);
+			robo.setCol(0);
+			robo.setN_col(0);
+			robo.setMax_col(20);
+			robo.setFloor(new int[20][20]);
+			
+			robo.executeCommand("M 3");
+			
+			String expectedOutput = "Robot is moving 3 steps";
+			String actualOutput = outputStream.toString().trim();
+			
+			assertEquals(expectedOutput, actualOutput);	
+		}
 		
+
 		@Test
 		public void testExecuteCommand_M_west() {
 						
@@ -150,6 +176,32 @@ public class RobotExecuteCommandTest {
 			robo.setMax_row(10);
 			robo.setN_row(0);
 			robo.setPen_active(false);
+			robo.setCol(5);
+			robo.setN_col(0);
+			robo.setMax_col(10);
+			robo.setFloor(new int[10][10]);
+			
+			robo.executeCommand("M 3");
+			
+			String expectedOutput = "Robot is moving 3 steps";
+			String actualOutput = outputStream.toString().trim();
+			
+			assertEquals(expectedOutput, actualOutput);	
+		}
+
+		
+		@Test
+		public void testExecuteCommand_M_west_pendown() {
+						
+			ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+	        PrintStream printStream = new PrintStream(outputStream);
+	        System.setOut(printStream);
+			
+			robo.setCurrent_direction("west");
+			robo.setRow(0);
+			robo.setMax_row(10);
+			robo.setN_row(0);
+			robo.setPen_active(true);
 			robo.setCol(5);
 			robo.setN_col(0);
 			robo.setMax_col(10);

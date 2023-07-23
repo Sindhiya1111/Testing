@@ -11,7 +11,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
-
+//covers R8,R9,R10
 @RunWith(Parameterized.class)
 public class RobotMovementTest {
 	
@@ -169,6 +169,7 @@ public class RobotMovementTest {
 		assertEquals(expectedOutput, actualOutput);	
 	}
 	
+
 	@Test
 	public void testExecuteCommand_M_west_nospace() {
 		Robot robo = new Robot();			

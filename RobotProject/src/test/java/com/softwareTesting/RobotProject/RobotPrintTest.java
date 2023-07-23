@@ -9,7 +9,7 @@ import java.io.PrintStream;
 import org.junit.Test;
 
 public class RobotPrintTest {
-
+//covers R3, R11
 	@Test
 	public void testPrintFloor() {
 		Robot robo = new Robot();

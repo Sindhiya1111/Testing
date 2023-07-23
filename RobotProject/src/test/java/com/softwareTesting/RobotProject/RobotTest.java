@@ -16,9 +16,9 @@ import org.junit.runners.Parameterized;
 public class RobotTest {
 	
 	
-
+//covers requirement R1,R2,R13,R14
 	//UserInput Test
-	// if user press space check !!
+	// TS14 - R14
 	@Test
 	public void getUserInputtest() {
 		Robot robo = new Robot();
@@ -74,6 +74,12 @@ public class RobotTest {
 	public void testCheckInitialInputTestInvalidInputSymbol() {
 		Robot robo = new Robot();
 		assertEquals(false, robo.checkInitialInput("$ #"));
+	}
+	
+	@Test
+	public void testCheckInitialInputTestInvalidInputS() {
+		Robot robo = new Robot();
+		assertEquals(false, robo.checkInitialInput(""));
 	}
 	
 	

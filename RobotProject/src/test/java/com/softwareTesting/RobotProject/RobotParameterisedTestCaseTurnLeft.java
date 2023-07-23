@@ -10,7 +10,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
-
+// covers R7
 @RunWith(Parameterized.class)
 public class RobotParameterisedTestCaseTurnLeft {
 	
