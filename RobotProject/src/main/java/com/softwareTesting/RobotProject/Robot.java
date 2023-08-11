@@ -126,7 +126,7 @@ public class Robot {
 			 executeCommand(command);
 			 pass = true;
 		 }else {
-			 
+			
 			 pass = false;
 			 
 			 }
@@ -193,23 +193,30 @@ public class Robot {
 	        	command = getUserInput();
 	        	pass = checkInput(command);
 	        	
-	        	if (pass){
-	        		executeCommand(command);
-	        	}else {
-	        		pass = false;
-	        		break;
-	        	}
-	        	 
+	        	validateInput(pass, command);
+
 	        };
 	        
 		    }else {
 		    	pass = false;
-		    	System.out.println("Invalid input");
+		    	System.out.println("Invalid input !! Please initialize the system to activate the robot");
 		    }
-		System.out.println("Program Terminated");
-		
+				
 		return command;
 		
+	}
+	
+	public static void validateInput(boolean pass, String command) {
+		if (pass){
+    		executeCommand(command);
+    	}else {
+    		pass = false;
+    		if(command.equals("Q")) {
+    		
+    		}else {
+    		System.out.println("invalid input");
+    		}
+    	}
 	}
 	
 //executing command 
@@ -248,6 +255,9 @@ public class Robot {
         case 'P':
         		printFloor(floor);
         		break;
+        case 'Q':
+    		System.out.println("Program Terminated Successfully");
+    		break;
         default:
             System.out.println("Invalid Input");
             break;

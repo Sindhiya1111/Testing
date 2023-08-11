@@ -37,12 +37,9 @@ public class RobotCommandScreenTest {
 		assertEquals(false,robo.isPass() );
 	}
 	
+
 	
-//	@Test
-//	public void testCommandScreenValidInputD() {
-//		robo.commandScreen(true, "D");
-//        assertEquals("Q",robo.getCommand());
-//	}
+
 	
 	
 
