@@ -261,6 +261,8 @@ public class Robot {
         default:
             System.out.println("Invalid Input");
             break;
+      
+
 		 }
 	 }
 	
