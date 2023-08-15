@@ -175,7 +175,7 @@ public class Robot {
 	public String commandScreen(boolean pass, String command) {
 		
 		if(pass) {
-			while (!command.equals("Q")){
+			while (!(command.equalsIgnoreCase("Q"))){
 				System.out.println("");
 				System.out.println("________________________________________________________");
 				System.out.println("\n\n");
@@ -211,7 +211,7 @@ public class Robot {
     		executeCommand(command);
     	}else {
     		pass = false;
-    		if(command.equals("Q")) {
+    		if(command.equalsIgnoreCase("Q")) {
     		
     		}else {
     		System.out.println("invalid input");
